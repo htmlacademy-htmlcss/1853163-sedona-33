@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [ольга печенюк](https://up.htmlacademy.ru/htmlcss/33/user/1853163).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Думчев](https://htmlacademy.ru/profile/nikopol-fw).
 
 ---
 
