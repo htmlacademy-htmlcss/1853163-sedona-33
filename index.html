@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <header class="page-header">
@@ -42,7 +43,9 @@
 </header>
 <main class="main-index">
   <h1 class="visually-hidden">Город Седона</h1>
+  <div class="sedona-welcome-logo">
   <img src="images/welcome.svg" class="welcome-logo" alt="Добро пожаловать в Седону" width="458"  height="352">
+  </div>
   <p class="sedona-description">Седона — небольшой городок в Аризоне,<br>
     заслуживающий большего!</p>
   <section class="advantages">
@@ -50,26 +53,28 @@
     <p class="sedona-advantages">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
     <ol class="advantages-list">
       <li class="advantages-item">
+      <div class="white-text">
         <h3 class="advantages-title">Настоящий городок</h3>
         <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+      </div>
         <img class="advantage-photo advantage-photo-1" src="images/advantage1.jpg" width="800"  height="384" alt="Городской пейзаж">
         <ul class="small-advantages-list">
-          <li class="small-advantages-item">
+          <li class="small-advantages-item blue-background">
             <img class="icon icon-1" src="">
-            <h4 class="small-advantages-title">Жильё</h4>
+            <h4 class="advantages-title ">Жильё</h4>
             <p class="small-advantages-description">Рекомендуем пожить
               в настоящем мотеле,
               всё как в кино!</p>
           </li>
-          <li class="small-advantages-item">
+          <li class="small-advantages-item white-background">
             <img class="icon icon-2" src="">
-            <h4 class="small-advantages-title">Еда</h4>
+            <h4 class="advantages-title ">Еда</h4>
             <p class="small-advantages-description">Всегда заказывайте
               топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="small-advantages-item">
+          <li class="small-advantages-item blue-background">
             <img class="icon icon-3" src="">
-            <h4 class="small-advantages-title">Сувениры</h4>
+            <h4 class="advantages-title">Сувениры</h4>
             <p class="small-advantages-description">Не только китайского,
               но и настоящего местного производства!</p>
           </li>
@@ -77,19 +82,21 @@
       </li>
       <li class="advantages-item">
         <img class="advantage-photo advantage-photo-2" src="images/advantage2.jpg" width="800"  height="384"src="" alt="Мост дьявола">
+        <div class="white-text">
         <h3 class="advantages-title">Там есть
           мост дьявола</h3>
         <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+        </div>
       </li>
-      <li class="advantages-item">
+      <li class="advantages-item blue-background">
         <h3 class="advantages-title">Небольшая площадь</h3>
         <p class="advantages-description">Все достопримечательности находятся очень близко</p>
       </li>
-      <li class="advantages-item">
+      <li class="advantages-item dark-blue-background">
         <h3 class="advantages-title">Красивая дорога</h3>
         <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </li>
-      <li class="advantages-item">
+      <li class="advantages-item blue-background">
         <h3 class="advantages-title">Мало туристов</h3>
         <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
       </li>
@@ -106,7 +113,7 @@
   </section>
 </main>
 <footer class="page-footer">
-  <section class="mailing-list">
+  <section class="mailing-list index-mailing-list">
     <h2 class="visually-hidden">Рассылка</h2>
     <p class="subscribe-mailing-list">Подпишитесь на рассылку</p>
     <p class="mailing-list-description">Только полезная информация и никакого спама,
