@@ -15,12 +15,21 @@
 }
 
 body {
-  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   background-color: #FFFFFF;
   color: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .page-container {
@@ -33,16 +42,18 @@ body {
 
 .page-header {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0 70px;
 }
 
-.navigation {
+.navigation-menu {
   display: flex;
   flex-grow: 1;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 17px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -51,15 +62,30 @@ body {
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  margin: 0;
   padding: 0;
-  width: 450px;
+  margin: 0 282px 0 0;
 }
 
-.navigation-user {
+.user-menu {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 300px;
-  margin-left: auto;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.user-menu-item {
+  text-decoration: none;
+}
+
+.user-menu .user-menu-link {
+  min-width: 18px;
+  min-height: 18px;
 }
 
 .navigation-logo {
@@ -68,6 +94,8 @@ body {
 }
 
 .header-button {
+  padding: 9px 15px 8px;
+  margin-top: 14px;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
@@ -77,14 +105,20 @@ body {
   background-color: #756257;
 }
 
+.header-logo {
+  display: block;
+}
+
 .main-container {
   flex-grow: 1;
 }
 
 .sedona-welcome-logo {
-  background-image: url("../images/index-background.jpg");
+  padding: 46px 371px 82px;
+  background-image: url("../images/divider.svg"), url("../images/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: bottom;
+  background-size: auto, cover;
 }
 
 .welcome-logo {
@@ -93,6 +127,7 @@ body {
 }
 
 .sedona-description {
+  margin: 63px 240px 31px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -105,15 +140,24 @@ body {
   font-size: 22px;
   line-height: 36px;
   text-align: center;
+  margin: 0 240px 80px;
+}
+
+.big-description-container {
+  padding: 97px 90px 20px;
+}
+
+.small-description-container {
+  padding: 89px 75px 79px;
 }
 
 .advantages-list {
   text-align: center;
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-item-photo {
@@ -121,10 +165,9 @@ body {
 }
 
 .small-advantages-list {
-  margin: 0;
-  padding: 0;
   display: flex;
   list-style: none;
+  padding: 0;
 }
 
 .advantages-item,
@@ -135,6 +178,19 @@ body {
 
 .advantages-item-big {
   flex-basis: 100%;
+}
+
+.advantages-description {
+  margin: 30px 0 0;
+}
+
+.small-advantages-description {
+  margin: 20px 0 0;
+}
+
+.icon {
+  min-width: 75px;
+  min-height: 72px;
 }
 
 .advantages-title {
@@ -163,6 +219,7 @@ body {
 
 .search {
   text-align: center;
+  padding: 91px 240px 93px;
 }
 
 .search-title {
@@ -170,15 +227,19 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 0 29px;
 }
 
 .search-info {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  width: 720px;
+  margin: 0 0  56px;
 }
 
 .search-button {
+  display: inline-block;
   background-color: #756257;
   font-weight: 700;
   font-size: 20px;
@@ -187,6 +248,11 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   text-decoration: none;
+  padding: 15px;
+}
+
+.mailing-list {
+  padding: 73px 200px 140px;
 }
 
 .index-mailing-list {
@@ -203,6 +269,9 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 46px;
 }
 
 .mailing-list-description {
@@ -210,8 +279,10 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  margin: 0 140px 46px;
 }
-
 
 .subscribe-button {
   text-align: center;
@@ -222,29 +293,41 @@ body {
   line-height: 26px;
 }
 
-.footer-contacts {
-  text-align: center;
-  width: 720px;
+.footer-contact-list {
+  padding: 40px 72px 30px;
 }
 
+
 .footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 110px;
-  margin-right: 60px;
   list-style: none;
+  padding: 0;
+  margin-right: 61px;
+}
+
+.footer-social-item {
+  width: 18px;
+  height: 15px;
 }
 
 .footer-contacts-phone {
+  display: block;
   text-decoration: none;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  margin-right: 53px;
+  width: 720px;
 }
 
-.footer-logo {
+.htmlacademy-logo {
+  display: block;
   width: 115px;
-  margin-left: 60px;
+  margin-left: auto;
 }
 
 .inner-header {
@@ -252,9 +335,13 @@ body {
   background-repeat: no-repeat;
   color: #FFFFFF;
   background-size: 100% auto;
+  padding-top: 35px;
+  padding-bottom: 83px;
+
 }
 
 .inner-title {
+  margin: 0;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
@@ -263,10 +350,12 @@ body {
 .inner-header-content {
   width: 1060px;
   margin: 0 auto;
+  padding-top: 35px;
 }
 
 .breadcrumbs {
-  padding: 0;
+  display: flex;
+  margin: 5px 0 45px;
   list-style: none;
 }
 
@@ -275,6 +364,10 @@ body {
   line-height: 21px;
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.to-main-breadcrumbs {
+  min-width: 12px;
 }
 
 .control-input {
@@ -292,6 +385,14 @@ body {
   margin: 0;
 }
 
+.catalog-filter-title {
+  padding-bottom: 30px;
+}
+
+.price-title {
+  margin-bottom: 34px;
+}
+
 .catalog-infrastructure {
   width: 150px;
   margin-right: 65px;
@@ -299,11 +400,21 @@ body {
 
 .catalog-filter-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.hotel-type {
+.hotel-type-group {
   min-width: 130px;
-  margin-right: 195px;
+  margin-right: 167px;
+}
+
+.catalog-filter-item {
+  padding-bottom: 13px;
+}
+
+.catalog-filter-item:last-child {
+  padding-bottom: 0;
 }
 
 .price {
@@ -329,6 +440,8 @@ body {
   background-color: #83B3D3;
   color: #FFFFFF;
   width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .catalog-filter {
@@ -336,8 +449,6 @@ body {
 }
 
 .catalog-filter-list {
-  padding: 0;
-  margin: 0;
 }
 
 .reset-value {
@@ -349,7 +460,7 @@ body {
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-
+  margin: 56px 0 44px;
 }
 
 .hotel-type-filter {
@@ -363,12 +474,12 @@ body {
 }
 
 .hotel-list {
-  margin: 0;
-  padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 0 34px;
+  padding: 0;
 }
 
 .hotel-card {
@@ -383,12 +494,17 @@ body {
 }
 
 .hotel-type-filter {
-  padding: 0;
   margin: 0 80px 0 0;
 }
 
 .cards-position-item {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-position-item {
+  min-width: 48px;
 }
 
 .select-control {
@@ -405,24 +521,24 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
+  margin: 16px 0;
 }
 
-.hotel-name {
-  font-weight: normal;
+.price-name {
+  display: flex;
+  margin: 0 0 16px;
+  color: #333333;
   font-size: 18px;
   line-height: 23px;
-  color: #000000;
+}
+
+.price-name-inner {
+  flex-basis: 50%;
 }
 
 .hotel-card-link {
   color: #000000;
   text-decoration: none;
-}
-
-.hotel-price {
-  color: #333333;
-  font-size: 18px;
-  line-height: 23px;
 }
 
 .details-card-button {
@@ -434,6 +550,7 @@ body {
   color: #FFFFFF;
   background-color: #756257;
   text-decoration: none;
+  margin-right: 26px;
 }
 
 .favorites-button {
@@ -445,6 +562,14 @@ body {
   color: #FFFFFF;
   text-decoration: none;
   background-color: #83B3D3;
+}
+
+.favorites-details {
+  margin-bottom: 16px;
+}
+
+.stars {
+  min-width: 91px;
 }
 
 .in-favorites-button {
@@ -465,6 +590,7 @@ body {
   text-transform: uppercase;
   color: #333333;
   background: #F2F2F2;
+
 }
 
 .download-more-button {
@@ -475,16 +601,26 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #83B3D3;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  width: 620px;
+  height: 60px;
 }
 
 .download-more {
   text-align: center;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;
+  padding: 30px 0;
 }
 
 .pagination-select {
   display: flex;
   width: 1056px;
   justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 73px;
+  align-items: center;
 }
 
 .pagination-link {
@@ -509,6 +645,10 @@ body {
   background-color: #83B3D3;
   width: 55px;
   margin-right: 8px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination-current-item {
@@ -516,8 +656,6 @@ body {
 }
 
 .pagination-list {
-  margin: 0;
-  padding: 0;
   display: flex;
   list-style: none;
 }
