@@ -160,10 +160,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "advantage-item-city advantage-item-city advantage-item-city"
-    "advantage-item-bridge advantage-item-bridge advantage-item-bridge"
-    "advantage-square advantage-road advantage-tourist";
 }
 
 .advantages-item-photo {
@@ -188,22 +184,32 @@ body {
 
 .advantage-item-city{
   grid-area: advantage-item-city;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
 }
 
 .advantage-item-bridge{
   grid-area: advantage-item-bridge;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
 }
 
 .advantage-square{
   grid-area: advantage-square;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
 }
 
 .advantage-road{
   grid-area: advantage-road;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
 }
 
 .advantage-tourist{
   grid-area: advantage-tourist;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
 }
 
 
