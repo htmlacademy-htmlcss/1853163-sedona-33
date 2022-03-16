@@ -1859,6 +1859,6 @@ body {
   cursor: pointer;
 }
 
-/*.modal-container-close {
+.modal-container-close {
   display: none;
 }
