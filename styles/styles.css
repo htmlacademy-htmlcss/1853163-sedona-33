@@ -1501,7 +1501,8 @@ body {
 }
 
 .modal-close-button:focus {
-  border: 1px solid #83B3D3;
+  box-shadow: inset 0 0 0 1px #83B3D3;
+  outline: none;
   background-color: #E6E6E6;
 }
 
@@ -1513,8 +1514,8 @@ body {
 
 .modal-title {
   margin: 0;
-  margin-bottom: 63px;
-  margin-left: -5px;
+  margin-bottom: 62px;
+  margin-left: -3px;
   font-size: 30px;
   line-height: 35px;
   font-weight: 600;
@@ -1556,12 +1557,14 @@ body {
 }
 
 .auth-form-field:focus {
-  border: 1px solid #83B3D3;
+  box-shadow: inset 0 0 0 1px #83B3D3;
+  outline: none;
   background-color: #E6E6E6;
 }
 
 .auth-form-field:active {
-  border: 1px solid #000000;
+  box-shadow: inset 0 0 0 1px #000000;
+  outline: none;
 }
 
 .auth-form-field::placeholder {
@@ -1604,7 +1607,8 @@ body {
 }
 
 .auth-form-button:focus {
-  border: 1px solid #756257;
+  box-shadow: inset 0 0 0 1px #756257;
+  outline: none;
   background-color: #68A2CA;
 }
 
@@ -1685,6 +1689,17 @@ body {
   content: "";
 }
 
+.small-input-children::before {
+  position: absolute;
+  top: 17px;
+  right: 105px;
+  width: 12px;
+  height: 1px;
+  background: #000000;
+  opacity: 0.3;
+  content: "";
+}
+
 .small-input-children:hover::before,
 .small-input-adults:hover::before {
   opacity: 1;
@@ -1692,7 +1707,8 @@ body {
 
 .small-input-children:focus::before,
 .small-input-adults:focus::before {
-  border: 1px solid #83B3D3;
+  box-shadow: inset 0 0 0 1px #83B3D3;
+  outline: none;
   background: rgba(0, 0, 0, 1);
   opacity: 1;
 }
@@ -1700,6 +1716,76 @@ body {
 .input-label-children {
   margin-left: -16px;
   margin-right: 50px;
+}
+
+
+.auth-adults::before {
+  position: absolute;
+  top: 10px;
+  left: 260px;
+  width: 1px;
+  height: 14px;
+  background: #000000;
+  opacity: 0.3;
+  content: "";
+}
+
+.auth-adults::after {
+  position: absolute;
+  top: 17px;
+  right: 307px;
+  width: 14px;
+  height: 1px;
+  background: #000000;
+  opacity: 0.3;
+  content: "";
+}
+
+
+.auth-children::before {
+  position: absolute;
+  top: 10px;
+  width: 1px;
+  height: 14px;
+  background: #000000;
+  opacity: 0.3;
+  content: "";
+  right: 27px;
+}
+
+.auth-children::after {
+  position: absolute;
+  top: 17px;
+  right: 21px;
+  width: 14px;
+  height: 1px;
+  background: #000000;
+  opacity: 0.3;
+  content: "";
+}
+
+.auth-adults:hover::before,
+.auth-adults:hover::after,
+.auth-children:hover::before,
+.auth-children:hover::after {
+  opacity: 1;
+}
+
+.auth-adults:focus::before,
+.auth-adults:focus::after,
+.auth-children:focus::before,
+.auth-children:focus::after {
+  box-shadow: inset 0 0 0 1px #83B3D3;
+  outline: none;
+  opacity: 1;
+}
+
+.auth-adults:active::before,
+.auth-adults:active::after,
+.auth-children:active::before,
+.auth-children:active::after {
+  box-shadow: inset 0 0 0 1px #83B3D3;
+  outline: none;
 }
 
 .small-form-field::-webkit-outer-spin-button,
@@ -1773,6 +1859,6 @@ body {
   cursor: pointer;
 }
 
-.modal-container-close {
-  display: none;
-}
+/*.modal-container-close {*/
+/*  display: none;*/
+/*}*/
