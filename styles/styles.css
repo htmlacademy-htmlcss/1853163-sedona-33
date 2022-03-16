@@ -1857,9 +1857,8 @@ body {
   padding: 0;
   border: none;
   cursor: pointer;
-
 }
 
-.modal-container-close {
+/*.modal-container-close {
   display: none;
 }
