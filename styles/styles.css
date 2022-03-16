@@ -1457,13 +1457,13 @@ body {
 
 .modal-container {
   position: fixed;
-  bottom: -677px;
-  left: 2px;
+  top: 0;
+  left: 0;
   display: flex;
   width: 100%;
-  height: 200%;
+  height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
-  z-index: 1;
+  z-index: 100;
 }
 
 .modal {
@@ -1473,9 +1473,8 @@ body {
 }
 
 .modal-auth {
-  width: 715px;
-  height: 561px;
-  padding: 64px 70px 14px;
+  max-width: 715px;
+  padding: 62px 70px 70px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   box-sizing: border-box;
@@ -1484,8 +1483,8 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 56px;
-  right: 72px;
+  top: 55px;
+  right: 70px;
   width: 53px;
   height: 53px;
   background-image: url(../images/close.svg);
@@ -1538,7 +1537,7 @@ body {
 .auth-form .field {
   width: 420px;
   box-sizing: border-box;
-  padding: 0 0 0 16px;
+  padding: 1px 15px 0 18px;
   height: 50px;
 }
 
@@ -1573,13 +1572,12 @@ body {
 
 .small-form-field {
   width: 116px;
-  margin: 0;
   font-size: 18px;
   line-height: 40px;
   color: #000000;
   text-align: center;
   padding: 4px 10px;
-  margin-left: 3px;
+  margin: -4px 0 0 3px;
 }
 
 .small-form-field:first-of-type {
@@ -1650,22 +1648,15 @@ body {
 }
 
 .input-label {
-  margin-left: -2px;
-  display: flex;
-  align-items: center;
-  height: 50px;
   font-weight: 700;
   font-size: 18px;
+  margin-top: 15px;
 }
 
 .small-input-label {
   margin-right: 69px;
-  margin-top: -7px;
+  margin-top: 10px
 }
-
-/*.modal-container-close {
-  display: none;
-}*/
 
 .field-group::after {
   content: '';
@@ -1694,17 +1685,6 @@ body {
   content: "";
 }
 
-.small-input-children::before {
-  position: absolute;
-  top: 17px;
-  right: 105px;
-  width: 12px;
-  height: 1px;
-  background: #000000;
-  opacity: 0.3;
-  content: "";
-}
-
 .small-input-children:hover::before,
 .small-input-adults:hover::before {
   opacity: 1;
@@ -1715,81 +1695,6 @@ body {
   border: 1px solid #83B3D3;
   background: rgba(0, 0, 0, 1);
   opacity: 1;
-}
-
-.auth-adults::before {
-  position: absolute;
-  top: 10px;
-  left: 260px;
-  width: 1px;
-  height: 14px;
-  background: #000000;
-  opacity: 0.3;
-  content: "";
-}
-
-.auth-adults::after {
-  position: absolute;
-  top: 17px;
-  right: 307px;
-  width: 14px;
-  height: 1px;
-  background: #000000;
-  opacity: 0.3;
-  content: "";
-}
-
-
-.auth-children::before {
-  position: absolute;
-  top: 10px;
-  width: 1px;
-  height: 14px;
-  background: #000000;
-  opacity: 0.3;
-  content: "";
-  right: 27px;
-}
-
-.auth-children::after {
-  position: absolute;
-  top: 17px;
-  right: 21px;
-  width: 14px;
-  height: 1px;
-  background: #000000;
-  opacity: 0.3;
-  content: "";
-}
-
-.auth-adults:hover::before,
-.auth-adults:hover::after,
-.auth-children:hover::before,
-.auth-children:hover::after {
-  opacity: 1;
-}
-
-.auth-adults:focus::before,
-.auth-adults:focus::after,
-.auth-children:focus::before,
-.auth-children:focus::after {
-  border: 1px solid #83B3D3;
-  opacity: 1;
-}
-
-.auth-adults:active::before,
-.auth-adults:active::after,
-.auth-children:active::before,
-.auth-children:active::after {
-  border: 1px solid #83B3D3;
-}
-
-.small-input-children {
-  margin-top: -6px;
-}
-
-.small-input-adults {
-  margin-top: -6px;
 }
 
 .input-label-children {
@@ -1806,8 +1711,8 @@ body {
 
 .tooltip {
   position: absolute;
-  margin-top: 6px;
-  margin-left: 395px;
+  margin-top: 7px;
+  margin-left: 397px;
   width: 16px;
   height: 16px;
 }
@@ -1858,4 +1763,16 @@ body {
   top: -9px;
   right: 50%;
   transform: translateX(50%);
+}
+
+.sign-button {
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-container-close {
+  display: none;
 }

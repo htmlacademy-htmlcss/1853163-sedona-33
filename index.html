@@ -238,10 +238,9 @@
         <p class="correct-date">На эти даты есть свободные номера. Пока есть.</p>
         <div class="auth-form-user-options">
           <label class="input-label small-input-label" for="adults">Взрослые:</label>
-          <span class="small-input-adults">
-            <input class="auth-form-field small-form-field" type="number" id="adults" placeholder="2" name="adults">
-          </span>
-          <span class="auth-adults"></span>
+          <button class="small-input-adults sign-button"></button>
+          <input class="auth-form-field small-form-field" type="number" id="adults" placeholder="2" name="adults">
+          <button class="auth-adults sign-button"></button>
           <label class="input-label small-input-label input-label-children" for="children">Дети:</label>
           <span class="tooltip">
             <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
@@ -260,11 +259,10 @@
             <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети<br> до 6 лет
             размещаются
             бесплатно.</span>
-                </span>
-          <span class="small-input-children">
+          </span>
+          <button class="small-input-children sign-button"></button>
           <input class="auth-form-field small-form-field" type="number" placeholder="1" id="children" name="children">
-        </span>
-          <span class="auth-children"></span>
+          <button class="auth-children sign-button"></button>
         </div>
         <button class="button auth-form-button" type="submit">Найти</button>
       </form>
